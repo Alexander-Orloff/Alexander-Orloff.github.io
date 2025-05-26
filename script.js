@@ -50,7 +50,7 @@ function Task2()
         var name;
         name = prompt('Введите сюда ваше имя');
         admin = name;
-        document.getElementById('task2-result').textContent = `Переменная admin: ${admin}`;
+        alert('Вас зовут '+admin);
     }
 }
 function Task3()
@@ -82,4 +82,65 @@ function changeBackground()
     const colors = ["#ffcccc", "#ccffcc", "#ccccff", "#ffffcc", "#ffccff"];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     document.body.style.backgroundColor = randomColor;
+}
+function validateForm() {
+    // Проверка имени
+    const name = document.getElementById('user-name').value;
+    if (!/^[a-zA-Zа-яА-Я\s]+$/.test(name)) {
+        alert('Имя должно содержать только буквы');
+        return;
+    }
+    
+    // Проверка возраста
+    const age = document.getElementById('user-age').value;
+    if (!/^\d+$/.test(age) || parseInt(age) <= 0) {
+        alert('Возраст должен быть положительным числом');
+        return;
+    }
+    
+    // Проверка пола
+    const gender = document.querySelector('input[name="gender"]:checked');
+    if (!gender) {
+        alert('Укажите ваш пол');
+        return;
+    }
+    
+    // Проверка навыков
+    const skills = document.querySelectorAll('input[name="skills"]:checked');
+    if (skills.length === 0) {
+        alert('Укажите хотя бы один навык');
+        return;
+    }
+    
+    // Проверка образования
+    const education = document.getElementById('education').value;
+    
+    // Проверка условий для принятия
+    let isAccepted = false;
+    const mathChecked = document.getElementById('math').checked;
+    const programmingChecked = document.getElementById('programming').checked;
+    
+    // Условие 1: знание математики и программирования
+    if (mathChecked && programmingChecked) {
+        isAccepted = true;
+    }
+    
+    // Условие 2: высшее образование и 2 любых навыка
+    if (education === 'university' && skills.length >= 2) {
+        isAccepted = true;
+    }
+    
+    // Показать результат
+    const resultText = isAccepted 
+        ? 'Поздравляем! Вас приняли.' 
+        : 'К сожалению, вы не подходите по критериям.';
+    
+    document.getElementById('result-text').textContent = resultText;
+    document.getElementById('form-result').style.display = 'block';
+    
+    // Блокировка чекбоксов после отправки
+    const allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+    allCheckboxes.forEach(checkbox => {
+        checkbox.disabled = true;
+    });
 }

@@ -31,14 +31,14 @@
                 <div class="input-group">
                     <input type="number" id="num1" placeholder="Число 1">
                     <input type="number" id="num2" placeholder="Число 2">
+                    <button onclick="Task1()">Решить</button>
                 </div>
-                <button onclick="Task1()">Решить</button>
+                
                 <div id="task1-result" class="result"></div>
             </div>
             <div class="section">
                 <h3>Задание 2. Присваивание переменной</h3>
                 <button onclick="Task2()">Выполнить</button>
-                <div id="task2-result" class="result"></div>
             </div>
             <div class="section">
                 <h3>Задание 3. Проверка возраста</h3>
@@ -49,6 +49,60 @@
                 <h3>Задание 4. Изменить фамилию</h3>
                 <input type="text" id="newLastName" placeholder="Введите новую фамилию">
                 <button onclick="changeLastName()">Изменить</button>
+            </div>
+            <div class="section">
+                <h3>Взаимодействие со страницей</h3>
+                <div class="task">
+                <h2>Анкета</h2>
+                <form id="questionnaire">
+                    <div class="form-group">
+                        <label for="user-name">Имя:</label>
+                        <input type="text" id="user-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="user-age">Возраст:</label>
+                        <input type="number" id="user-age" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Пол:</label>
+                        <div>
+                            <input type="radio" id="male" name="gender" value="М" label for="male">М</label>
+                            <input type="radio" id="female" name="gender" value="Ж" label for="female">Ж</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Навыки:</label>
+                        <div><input type="checkbox" id="math" name="skills" label for="math">Знание математики</label></div>
+                        <div><input type="checkbox" id="programming" name="skills" label for="programming">Знание программирования</label></div>
+                        <div><input type="checkbox" id="design" name="skills" label for="design">Дизайн</label></div>
+                        <div><input type="checkbox" id="Snacks" name="skills" label for="Snacks">Кушать чипсики</label></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="education">Образование:</label>
+                        <select id="education">
+                            <option value="school">Среднее</option>
+                            <option value="college">Среднее специальное</option>
+                            <option value="university">Высшее</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments">Комментарии:</label>
+                        <textarea id="comments"></textarea>
+                    </div>
+                    
+                    <button type="button" onclick="validateForm()">Отправить</button>
+                </form>
+                
+                <div id="form-result" class="result" style="display: none;">
+                    <h3>Результат проверки анкеты</h3>
+                    <p id="result-text"></p>
+                </div>
+            </div>
             </div>
             <div align="right"><button onclick="changeBackground()">Сменить цвет фона</button></div>
         </div>

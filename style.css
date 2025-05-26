@@ -23,7 +23,7 @@ p:hover
 }
 .container
 {
-    max-width: 550px;
+    max-width: 600px;
     margin: 0 auto;
     background: #fff;
     padding: 20px;
@@ -88,4 +88,51 @@ input
     padding: 15px;
     background-color: #f8f9fa;
     border-radius: 5px;
+}
+.form-group
+{
+    margin-bottom: 15px;
+}
+
+.form-group label
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group div
+{
+    margin: 5px 0;
+}
+
+input[type="radio"],
+input[type="checkbox"]
+{
+    margin-right: 10px;
+}
+
+textarea
+{
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Стили для выбора пола */
+.gender-label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.gender-options {
+    display: inline-block;
+}
+
+.radio-option {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
 }
