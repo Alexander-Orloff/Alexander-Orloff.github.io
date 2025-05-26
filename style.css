@@ -3,7 +3,6 @@ body
     font-family: sans-serif;
     line-height: 1;
     margin: 0;
-    padding: 20px;
     background-color: #f4f4f4;
 }
 h1
@@ -18,11 +17,11 @@ p
 }
 p:hover
 {
-    color: #e58b42;
+    color: #e545d5;
 }
 .container
 {
-max-width: 500px;
+max-width: 550px;
 margin: 0 auto;
 background: #fff;
 padding: 20px;
@@ -31,10 +30,10 @@ border-radius: 5px;
 }
 .section
 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
 }
 button
 {
@@ -52,4 +51,18 @@ input
     margin: 5px 0;
     border: 1px solid #3f2020;
     border-radius: 4px;
+}
+.cat-image
+{
+    float: right;
+    width: 225px;
+    height: 225px;
+    margin: 15px;
+    border-radius: 50%;
+}
+.cat-image:hover
+{
+    width: 220px;
+    height: 220px;
+    border: 2.5px solid black;
 }
