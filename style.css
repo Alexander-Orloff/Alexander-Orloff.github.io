@@ -9,7 +9,7 @@ h1
 {
     color: #333;
     text-align: center;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 p
 {
@@ -21,12 +21,12 @@ p:hover
 }
 .container
 {
-max-width: 550px;
-margin: 0 auto;
-background: #fff;
-padding: 20px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-border-radius: 5px;
+    max-width: 550px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 .section
 {
@@ -34,12 +34,16 @@ border-radius: 5px;
     padding: 15px;
     border: 1.5px solid #ddd;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 button
 {
     background-color: #747070;
     color: rgb(255, 255, 255);
     border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 15px;
 }
 button:hover
 {
@@ -65,4 +69,5 @@ input
     width: 220px;
     height: 220px;
     border: 2.5px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
